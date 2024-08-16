@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Banking | Tu home banking de confianza</title>
-		<link rel="stylesheet" href="./styles.css" />
-		<link rel="icon" type="image/x-icon" href="/imagenes/favicon.ico" />
-	</head>
-	<body>
-		<header>
-			<a href="#inicio" aria-label="Volver al inicio">
-				<img src="./imagenes/banking-logo.png" />
-			</a>
-			<nav>
-				<ul>
-					<li>
-						<a href="#"><img src="./imagenes/foto-random.jpg" /></a>
-					</li>
-					<li>
-						<a href="#"></a>
-					</li>
-					<li>
-						<a href="#"></a>
-					</li>
-				</ul>
-			</nav>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking | Tu home banking de confianza</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/imagenes/favicon.ico">
+	<!-- Iconos menus -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-			<ol>
-				<li>Tucuman</li>
-				<li>Misiones</li>
-				<li>Arrecife</li>
-				<li>CABA</li>
-				<li>Sala</li>
-			</ol>
+</head>
+<body>
+    <header>
+        <a href="#inicio" aria-label="Volver al inicio">
+            <img src="./imagenes/banking-logo.png" alt="Banking Logo">
+        </a>
+    </header>
+    <aside>
+		<!-- <span class="material-symbols-outlined"> menu</span>  -->
+
+    <ul>
+             <!-- <li><a href="#" data-form="transferencias">Transferencias</a></li>
+            <li><a href="#" data-form="pagos">Pagos de Facturas</a></li>
+            <li><a href="#" data-form="prestamos">Solicitar Préstamo</a></li>  -->
+			<li>
+				<a href="#" data-form="transferencias"> <span class="material-symbols-outlined  icon ">account_balance</span> Transferencias </a>
+			</li>
+			<li>
+				<a href="#" data-form="pagos"> <span class="material-symbols-outlined  icon">order_approve </span>Pagos de Facturas </a>
+			</li>
+			<li>
+				<a href="#" data-form="prestamos"><span class="material-symbols-outlined  icon">paid</span> Solicitar Préstamo </a>
+			</li>
 			
-		</header>
-		<aside></aside>
-		<main>Hola cambios</main>
-		<footer></footer>
-	</body>
+    </ul>
+
+
+    </aside>
+    <main id="main-content">
+       <!-- <p>Selecciona una opción del menú para ver el formulario.</p>  -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Banking Inc. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
 </html>
