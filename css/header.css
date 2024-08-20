@@ -1,0 +1,243 @@
+/*! HEADER */
+header {
+	grid-row: 1;
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: 234px 1fr max-content;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	padding: 16px;
+	background-color: #fbfbfb;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+header img {
+	height: 32px;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+/*! BOTONES */
+.search-bar {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.search-bar input[type='text'] {
+	width: 100%;
+	padding: 8px 12px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
+
+.search-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 4px 8px;
+	padding: 8px;
+	border-radius: 50%;
+	border: none;
+	background-color: #333333;
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.search-button span {
+	font-size: 16px;
+}
+
+/*! ICONOS DEL HEADER */
+.header-icons {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.header-icons button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+}
+
+.header-icons button .material-symbols-outlined {
+	font-size: 32px;
+}
+
+.header-icons .user-profile {
+	display: flex;
+	gap: 8px;
+}
+
+.header-icons .user-options {
+	display: flex;
+	align-items: center;
+}
+
+.header-icons .expand {
+	font-size: 20px;
+}
+
+.header-icons button:hover .material-symbols-outlined {
+	color: #007bff;
+}
+.nav-mobile {
+	display: none;
+	z-index: 250;
+}
+.nav-mobile__button {
+	width: 48px;
+	height: 48px;
+	position: relative;
+	padding: 16px;
+	border-radius: 15px;
+	cursor: pointer;
+	border: none;
+	background: #01cdfb;
+}
+
+.nav-mobile__button span {
+	color: #fff;
+	font-size: 20px;
+}
+.nav-mobile__button .open-icon,
+.nav-mobile__button .close-icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+}
+.nav-mobile__button .close-icon {
+	opacity: 0;
+}
+
+.nav-mobile__button.open .close-icon {
+	opacity: 1;
+}
+
+.nav-mobile__button.open .open-icon {
+	opacity: 0;
+}
+/*! FIN HEADER */
+@media screen and (max-width: 400px) {
+	header img {
+		height: 24px;
+	}
+}
+@media screen and (max-width: 600px) {
+	header {
+		grid-template-columns: max-content 1fr;
+	}
+}
+@media screen and (max-width: 800px) {
+	header {
+		width: 100%;
+		position: fixed;
+	}
+
+	aside {
+		position: fixed;
+		top: 80px;
+		width: 100%;
+		height: calc(100vh - 80px);
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+		background-color: #333333;
+	}
+
+	aside ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+	aside .register-button {
+		justify-content: center;
+	}
+
+	aside li a:link,
+	aside li a:visited {
+		display: flex;
+		justify-content: center;
+	}
+
+	aside .register-button {
+		font-size: 24px;
+		padding: 16px;
+	}
+
+	aside ul {
+		gap: 16px;
+	}
+
+	aside ul li {
+		margin: 0;
+	}
+
+	aside ul li a:link,
+	aside ul li a:visited {
+		color: #fff;
+		padding: 16px;
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.navigation {
+		gap: 4px;
+	}
+	/*! BOTONES */
+	.search-bar {
+		border: initial;
+		justify-content: end;
+	}
+
+	.search-bar input {
+		display: none;
+	}
+
+	.search-button {
+		margin: 0;
+		padding: 0;
+		background: none;
+	}
+
+	.search-button span {
+		font-size: 24px;
+		color: #000;
+	}
+	/*! ICONOS DEL HEADER */
+	.header-icons {
+		gap: 4px;
+	}
+	.header-icons button .material-symbols-outlined {
+		font-size: 24px;
+	}
+	.header-icons button span,
+	.header-icons .expand {
+		display: none;
+	}
+	/*! NAVEGACIÓN PARA TELÉFONOS */
+	.nav-mobile {
+		display: block;
+	}
+
+	.aside.visible {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: initial;
+	}
+}
