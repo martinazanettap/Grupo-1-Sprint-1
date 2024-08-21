@@ -119,4 +119,61 @@ main {
 	background-color: #01cdfb;
 }
 
+footer {
+    grid-row: 3; 
+    grid-column: 1 / -1;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: rgb(14, 32, 67);
+
+  }
+
+  .imagen-footer img{
+    margin-left: 70px;
+    margin-top: 40px;
+    height: 32px;
+
+    
+  }
+
+  .redes img{
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 25px;
+    
+  }
+
+  .copyright {
+    color: grey;
+    margin-left: 70px;
+    margin-bottom: 25px;
+    margin-top: -50px;
+    
+  }
+
+  .acciones ul, .redes ul{
+    list-style: none;
+    display: flex;
+  }
+
+  .acciones li{
+    gap: 40px;
+    margin-left: 30px;
+    margin-top: 40px;
+  }
+
+  .acciones a{
+    text-decoration: none;
+    color: rgb(118, 189, 250);
+  }
+
+  .redes{
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+  .redes ul{
+    margin: 20px;
+  }
+
 /*! FIN BOTON REGISTRAR*/
