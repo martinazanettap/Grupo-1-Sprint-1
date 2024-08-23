@@ -124,56 +124,139 @@ footer {
     grid-column: 1 / -1;
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: rgb(14, 32, 67);
+    padding: 20px 70px;
+}
 
-  }
-
-  .imagen-footer img{
-    margin-left: 70px;
+.imagen-footer img {
     margin-top: 40px;
-    height: 32px;
+    height: 55px;
+}
 
-    
-  }
-
-  .redes img{
+.redes img {
     height: 30px;
     margin-right: 10px;
     margin-top: 25px;
-    
-  }
+}
 
-  .copyright {
+.copyright {
     color: grey;
-    margin-left: 70px;
-    margin-bottom: 25px;
-    margin-top: -50px;
-    
-  }
+    margin-top: 20px;
+}
 
-  .acciones ul, .redes ul{
+.acciones ul, .redes ul {
     list-style: none;
     display: flex;
-  }
-
-  .acciones li{
     gap: 40px;
-    margin-left: 30px;
-    margin-top: 40px;
-  }
+    padding: 0;
+    margin: 0;
+}
 
-  .acciones a{
+.acciones li {
+    margin-top: 40px;
+}
+
+.acciones a {
     text-decoration: none;
     color: rgb(118, 189, 250);
-  }
+}
 
-  .redes{
+.redes {
     display: flex;
     justify-content: flex-end;
-    
-  }
+}
 
-  .redes ul{
-    margin: 20px;
-  }
+.redes ul {
+    margin: 20px 0;
+}
+
+@media (max-width: 800px) {
+    footer {
+        padding: 20px 50px;
+    }
+
+    .imagen-footer img {
+        margin-left: 0;
+    }
+
+    .acciones ul, .redes ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .acciones li, .redes ul {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        padding: 20px 30px;
+    }
+
+    .imagen-footer img {
+        margin-top: 30px;
+        height: 28px;
+    }
+
+    .acciones ul, .redes ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .acciones li {
+        margin-top: 15px;
+    }
+
+    .redes img {
+        height: 28px;
+        margin-right: 8px;
+        margin-top: 15px;
+    }
+
+    .copyright {
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    footer {
+        padding: 15px 20px;
+    }
+
+    .imagen-footer img {
+        margin-top: 20px;
+        height: 24px;
+    }
+
+    .acciones ul, .redes ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .acciones li {
+        margin-top: 10px;
+    }
+
+    .redes img {
+        height: 24px;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+
+    .copyright {
+        margin-top: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+
+
 
 /*! FIN BOTON REGISTRAR*/
