@@ -122,139 +122,144 @@ main {
 footer {
     grid-row: 3; 
     grid-column: 1 / -1;
+    background-color: rgb(255, 255, 255); 
     font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: rgb(14, 32, 67);
-    padding: 10px 30px; 
-    font-size: 0.9em; 
+   
+}
+
+.logo{
+    padding: 5px 40px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .imagen-footer img {
     margin-top: 10px; 
-    height: 40px; 
+    height: 60px; 
 }
 
-.acciones ul, .redes ul {
-    list-style: none;
+.copyright {
+    
+    font-size: 12px;
+    padding: 5px;
+}
+
+
+.legal h2, .enlaces h2{
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.enlaces{
     display: flex;
-    gap: 20px; 
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
 }
 
-.acciones li {
-    margin-top: 10px; 
-}
-
-.acciones a {
+.enlaces a{
     text-decoration: none;
-    color: rgb(118, 189, 250);
-    font-size: 0.9em;
+    color: #000;
+    padding-bottom: 7px;
+}
+
+.legal p{
+    padding-bottom: 7px;
+}
+
+.footer-titulo {
+    text-align: left;
 }
 
 .redes {
     display: flex;
-    justify-content: flex-end;
+    gap: 12px;
+    padding: 20px 20px 0 20px;
+    
 }
 
 .redes img {
-    height: 20px; 
-    margin-right: 8px; 
-    margin-top: 10px; 
-}
-
-.redes ul {
-    margin: 10px 0; 
-}
-
-.copyright {
-    color: grey;
-    margin-top: 10px; 
-    font-size: 12px; 
-    text-align: center; 
-}
-
-
-@media (max-width: 800px) {
-    footer {
-        padding: 10px 20px;
-    }
-
-    .imagen-footer img {
-        margin-left: 0;
-        height: 35px; 
-    }
-
-    .acciones ul, .redes ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px; 
-    }
-
-    .acciones li, .redes ul {
-        margin-top: 8px; 
-        margin-left: 0px;
-    }
-
-    .redes {
-        justify-content: center;
-    }
+    width: 30px;
+    height: 30px;
 }
 
 @media (max-width: 600px) {
     footer {
-        padding: 8px 15px;
+        flex-direction: column;
+        align-items: flex-start; 
+        padding: 15px;
     }
 
-    .imagen-footer img {
-        margin-top: 8px;
-        height: 30px; 
+    .footer-contenido {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .acciones li {
-        margin-top: 6px;
-    }
-
-    .redes img {
-        height: 18px; 
-        margin-right: 5px;
-        margin-top: 6px;
+    .logo {
+        order: 1; 
+        padding: 5px 20px;
     }
 
     .copyright {
-        margin-top: 6px;
+        order: 2; 
+        text-align: left;
+        padding: 10px;
+    }
+
+    .redes {
+        justify-content: flex-start;
+    }
+
+    .legal h2, .enlaces h2 {
+        font-size: 15px;
+    }
+
+    .redes img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .enlaces a {
+        padding-bottom: 5px;
+    }
+
+    .copyright {
+        font-size: 11px;
     }
 }
 
 @media (max-width: 400px) {
-    footer {
+    .logo {
         padding: 5px 10px;
     }
 
-    .imagen-footer img {
-        margin-top: 5px;
-        height: 25px; 
+    .redes img {
+        width: 20px;
+        height: 20px;
     }
 
-    .acciones ul, .redes ul {
+    .legal h2, .enlaces h2 {
+        font-size: 14px;
+    }
+
+    .enlaces {
         align-items: flex-start;
     }
 
-    .acciones li {
-        margin-top: 4px;
-    }
-
-    .redes img {
-        height: 16px; /* Ajustado la altura de los iconos */
-        margin-right: 3px;
-        margin-top: 4px;
+    .enlaces a {
+        padding-bottom: 5px;
+        font-size: 13px;
     }
 
     .copyright {
-        margin-top: 4px;
+        font-size: 10px;
+        text-align: left;
     }
 }
-
-
 
 
 
