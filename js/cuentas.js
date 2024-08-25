@@ -52,14 +52,12 @@ function iniciarSesion() {
 }
 
 // Configura el formulario de registro para manejar el evento de envío
-document.addEventListener('DOMContentLoaded', function () {
-	const formRegistro = document.getElementById('form-acceso');
-	formRegistro.addEventListener('submit', function (event) {
-		event.preventDefault();
-		const nombreUsuario = document.getElementById('nombre-usuario').value;
-		const contraseña = document.getElementById('contraseña').value;
-		const saldoInicial = parseFloat(document.getElementById('saldo-inicial').value);
+const formRegistro = document.getElementById('form-acceso');
+formRegistro.addEventListener('submit', function (event) {
+	event.preventDefault();
+	const nombreUsuario = document.getElementById('nombre-usuario').value;
+	const contraseña = document.getElementById('contraseña').value;
+	const saldoInicial = parseFloat(document.getElementById('saldo-inicial').value);
 
-		registrarUsuario(nombreUsuario, contraseña, saldoInicial);
-	});
+	registrarUsuario(nombreUsuario, contraseña, saldoInicial);
 });

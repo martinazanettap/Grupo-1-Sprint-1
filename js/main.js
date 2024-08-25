@@ -1,17 +1,15 @@
 // Carga y muestra la información del usuario al cargar la página
-document.addEventListener('DOMContentLoaded', function () {
-	const usuario = recuperarUsuariosDeLocalStorage(); // Recupera todos los usuarios de localStorage
-	const usuarioActual = localStorage.getItem('usuarioActual'); // Obtiene el usuario actual
-	const datosUsuario = usuario[usuarioActual]; // Accede a los datos del usuario actual
+const usuario = recuperarUsuariosDeLocalStorage(); // Recupera todos los usuarios de localStorage
+const usuarioActual = localStorage.getItem('usuarioActual'); // Obtiene el usuario actual
+const datosUsuario = usuario[usuarioActual]; // Accede a los datos del usuario actual
 
-	if (datosUsuario) {
-		const saldoNumerico = parseFloat(datosUsuario.saldo); // Convierte el saldo a número para asegurar la precisión
-		document.getElementById('user-balance').textContent = `$${saldoNumerico.toFixed(2)}`; // Formatea y muestra el saldo
-		cargarHistorial(datosUsuario.historialTransferencias, 'transfer-history'); // Carga el historial de transferencias
-		cargarHistorial(datosUsuario.historialPagos, 'payment-history'); // Carga el historial de pagos
-		cargarHistorial(datosUsuario.historialPrestamos, 'loan-history'); // Carga el historial de préstamos
-	}
-});
+if (datosUsuario) {
+	const saldoNumerico = parseFloat(datosUsuario.saldo); // Convierte el saldo a número para asegurar la precisión
+	document.getElementById('user-balance').textContent = `$${saldoNumerico.toFixed(2)}`; // Formatea y muestra el saldo
+	cargarHistorial(datosUsuario.historialTransferencias, 'transfer-history'); // Carga el historial de transferencias
+	cargarHistorial(datosUsuario.historialPagos, 'payment-history'); // Carga el historial de pagos
+	cargarHistorial(datosUsuario.historialPrestamos, 'loan-history'); // Carga el historial de préstamos
+}
 
 // Función para cargar y mostrar el historial en la interfaz del usuario
 function cargarHistorial(historial, elementoId) {

@@ -105,7 +105,5 @@ function cerrarSesionYVolverADemo() {
 	window.location.href = 'index.html'; // Redirige a la página de inicio
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-	actualizarNombreUsuarioEnHeader();
-	actualizarBotonCuenta();
-});
+actualizarNombreUsuarioEnHeader();
+actualizarBotonCuenta();
