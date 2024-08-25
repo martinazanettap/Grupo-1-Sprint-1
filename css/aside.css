@@ -1,0 +1,128 @@
+aside {
+	grid-row: 2;
+	grid-column: 1;
+	background-color: #fbfbfb;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	padding: 20px;
+	overflow-y: auto;
+}
+
+aside h2 {
+	margin-top: 0;
+}
+
+aside ul {
+	list-style: none;
+	padding: 0;
+}
+
+aside ul li {
+	margin: 15px 0;
+}
+
+aside ul li a {
+	text-decoration: none;
+	color: 333333;
+	font-weight: bold;
+	display: block;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+aside ul li a:hover {
+	background-color: #afecfa;
+}
+
+/*! PAGINA PRINCIPAL */
+main {
+	grid-row: 2;
+	grid-column: 2;
+	min-height: calc(100vh - 80px);
+	padding: 20px;
+	background-color: #f5f6fa;
+}
+
+/*! EDITAR ICONOS MENO*/
+.icon {
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+/*! EDITAR BOTON REGISTRAR*/
+.register-button {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #0283e9;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	font-size: 18px;
+	border-radius: 10px;
+	cursor: pointer;
+	gap: 10px;
+	text-decoration: none;
+}
+
+.plus-sign {
+	font-size: 20px;
+}
+
+.register-button:hover {
+	background-color: #01cdfb;
+}
+
+@media screen and (max-width: 800px) {
+	aside {
+		position: fixed;
+		top: 80px;
+		width: 100%;
+		height: calc(100vh - 80px);
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+		background-color: #333333;
+	}
+
+	aside ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+	aside .register-button {
+		justify-content: center;
+	}
+
+	aside li a:link,
+	aside li a:visited {
+		display: flex;
+		justify-content: center;
+	}
+
+	aside .register-button {
+		font-size: 24px;
+		padding: 16px;
+	}
+
+	aside ul {
+		gap: 16px;
+	}
+
+	aside ul li {
+		margin: 0;
+	}
+
+	aside ul li a:link,
+	aside ul li a:visited {
+		color: #fff;
+		padding: 16px;
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.aside.visible {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: initial;
+	}
+}

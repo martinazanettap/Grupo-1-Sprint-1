@@ -7,7 +7,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	height: 80px;
-	padding: 16px;
+	padding: 16px 32px;
 	background-color: #fbfbfb;
 	font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -135,68 +135,13 @@ header img {
 	opacity: 0;
 }
 /*! FIN HEADER */
-@media screen and (max-width: 400px) {
-	header img {
-		height: 24px;
-	}
-}
-@media screen and (max-width: 600px) {
-	header {
-		grid-template-columns: max-content 1fr;
-	}
-}
+
 @media screen and (max-width: 800px) {
 	header {
 		width: 100%;
 		position: fixed;
-	}
-
-	aside {
-		position: fixed;
-		top: 80px;
-		width: 100%;
-		height: calc(100vh - 80px);
-		opacity: 0;
-		pointer-events: none;
-		visibility: hidden;
-		background-color: #333333;
-	}
-
-	aside ul {
-		display: flex;
-		flex-direction: column;
-	}
-
-	aside .register-button {
-		justify-content: center;
-	}
-
-	aside li a:link,
-	aside li a:visited {
-		display: flex;
-		justify-content: center;
-	}
-
-	aside .register-button {
-		font-size: 24px;
 		padding: 16px;
 	}
-
-	aside ul {
-		gap: 16px;
-	}
-
-	aside ul li {
-		margin: 0;
-	}
-
-	aside ul li a:link,
-	aside ul li a:visited {
-		color: #fff;
-		padding: 16px;
-		background-color: rgba(255, 255, 255, 0.1);
-	}
-
 	.navigation {
 		gap: 8px;
 	}
@@ -236,10 +181,14 @@ header img {
 	.nav-mobile {
 		display: block;
 	}
-
-	.aside.visible {
-		opacity: 1;
-		visibility: visible;
-		pointer-events: initial;
+}
+@media screen and (max-width: 600px) {
+	header {
+		grid-template-columns: max-content 1fr;
+	}
+}
+@media screen and (max-width: 400px) {
+	header img {
+		height: 24px;
 	}
 }

@@ -65,7 +65,7 @@ function actualizarBotonCuenta() {
 			return false;
 		};
 	} else if (!esPaginaDeCuentas && usuarioActual !== 'Demo') {
-		botonCuenta.innerHTML = 'Cambiar cuenta <span class="plus-sign material-symbols-outlined">add</span>';
+		botonCuenta.innerHTML = 'Cambiar cuenta';
 	} else {
 		botonCuenta.innerHTML = 'Ingreso <span class="plus-sign material-symbols-outlined">add</span>';
 		botonCuenta.href = './cuentas.html';

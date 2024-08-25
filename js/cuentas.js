@@ -59,9 +59,23 @@ function cerrarSesionYVolverADemo() {
 			nombre: 'Demo',
 			password: 'demo123',
 			saldo: 1000,
-			historialTransferencias: [],
-			historialPrestamos: [],
-			historialPagos: []
+			historialTransferencias: [
+				{ fecha: '2024-01-15', monto: 200, destinatario: 'Proveedor A', descripcion: 'Pago de servicios' },
+				{ fecha: '2024-01-20', monto: 150, destinatario: 'Proveedor B', descripcion: 'Compra de material' }
+			],
+			historialPagos: [
+				{ fecha: '2024-01-18', monto: 100, tipo: 'Luz', descripcion: 'Pago de factura de luz' },
+				{ fecha: '2024-01-22', monto: 50, tipo: 'Internet', descripcion: 'Pago de factura de internet' }
+			],
+			historialPrestamos: [
+				{
+					fecha: '2024-01-10',
+					monto: 5000,
+					tipo: 'Personal',
+					tasaInteres: '5%',
+					descripcion: 'Préstamo personal a 12 meses'
+				}
+			]
 		};
 		localStorage.setItem('usuarios', JSON.stringify(usuarios));
 	}
