@@ -52,7 +52,7 @@ function actualizarNombreUsuarioEnHeader() {
 function actualizarBotonCuenta() {
 	const usuarioActual = localStorage.getItem('usuarioActual');
 	const botonCuenta = document.getElementById('account-action');
-	const esPaginaDeCuentas = window.location.pathname.includes('cuentas.html');
+	const esPaginaDeCuentas = window.location.pathname.includes('cuentas');
 
 	if (usuarioActual === 'Demo' && esPaginaDeCuentas) {
 		botonCuenta.innerHTML = '⬅ Volver';
