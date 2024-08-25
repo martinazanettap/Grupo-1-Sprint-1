@@ -1,8 +1,8 @@
-// index.js
+// Recupera los datos de los usuarios almacenados en localStorage
 function recuperarUsuariosDeLocalStorage() {
 	const usuarios = localStorage.getItem('usuarios');
 	if (!usuarios) {
-		// Creamos un usuario demo por defecto si no existe ningún usuario
+		// Si no hay usuarios, crea un usuario demo con datos de ejemplo
 		const usuarioDemo = {
 			Demo: {
 				nombre: 'Demo',
@@ -34,33 +34,31 @@ function recuperarUsuariosDeLocalStorage() {
 	return JSON.parse(usuarios);
 }
 
+// Actualiza la información de usuarios en localStorage
 function actualizarUsuariosEnLocalStorage(usuarios) {
 	localStorage.setItem('usuarios', JSON.stringify(usuarios));
 }
 
+// Actualiza el nombre del usuario en el encabezado
 function actualizarNombreUsuarioEnHeader() {
-	const usuarios = recuperarUsuariosDeLocalStorage(); // Esto llama a la función correcta
+	const usuarios = recuperarUsuariosDeLocalStorage();
 	const usuarioActual = localStorage.getItem('usuarioActual');
 	const usuario = usuarios[usuarioActual];
 	const elementoNombreUsuario = document.querySelector('.user-options span');
-	if (usuario && usuario.nombre) {
-		elementoNombreUsuario.textContent = usuario.nombre;
-	} else {
-		elementoNombreUsuario.textContent = 'Usuario nuevo';
-	}
+	elementoNombreUsuario.textContent = usuario ? usuario.nombre : 'Usuario nuevo';
 }
 
+// Gestiona el texto del botón de cuenta según el estado del usuario
 function actualizarBotonCuenta() {
 	const usuarioActual = localStorage.getItem('usuarioActual');
 	const botonCuenta = document.getElementById('account-action');
-	const esPaginaDeCuentas = window.location.pathname.includes('cuentas.html'); // Verifica si el usuario está en la página de cuentas
+	const esPaginaDeCuentas = window.location.pathname.includes('cuentas.html');
 
 	if (usuarioActual === 'Demo' && esPaginaDeCuentas) {
-		// Cambia el texto para "Volver" y elimina el signo +
 		botonCuenta.innerHTML = '⬅ Volver';
-		botonCuenta.href = 'index.html'; // Ajusta el enlace para volver al inicio
+		botonCuenta.href = 'index.html';
 	} else if (usuarioActual !== 'Demo' && esPaginaDeCuentas) {
-		botonCuenta.innerHTML = 'Cerrar sesión'; // Simplifica el texto sin el +
+		botonCuenta.innerHTML = 'Cerrar sesión';
 		botonCuenta.href = '#';
 		botonCuenta.onclick = function () {
 			cerrarSesionYVolverADemo();
@@ -74,10 +72,6 @@ function actualizarBotonCuenta() {
 		botonCuenta.onclick = null;
 	}
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-	actualizarBotonCuenta();
-});
 
 document.addEventListener('DOMContentLoaded', function () {
 	actualizarNombreUsuarioEnHeader();
