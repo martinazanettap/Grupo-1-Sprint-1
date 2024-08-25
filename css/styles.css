@@ -71,7 +71,7 @@ aside ul li {
 
 aside ul li a {
 	text-decoration: none;
-	color: black;
+	color: 333333;
 	font-weight: bold;
 	display: block;
 	padding: 10px;
@@ -109,6 +109,7 @@ main {
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
+	text-decoration: none;
 }
 
 .plus-sign {
@@ -119,149 +120,194 @@ main {
 	background-color: #01cdfb;
 }
 
-footer {
-    grid-row: 3; 
-    grid-column: 1 / -1;
-    background-color: rgb(255, 255, 255); 
-    font-family: "Plus Jakarta Sans", sans-serif;
-   
+/* !MAIN-CONTENT */
+#main-content .user-dashboard {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #f4f4f4;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
-    padding: 5px 40px;
+#main-content .dashboard-section {
+	margin-bottom: 20px;
+}
+
+#main-content .dashboard-section h3 {
+	color: #333;
+	border-bottom: 2px solid #007bff;
+}
+
+#main-content #user-balance {
+	font-size: 24px;
+	color: #007bff;
+}
+
+#main-content ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#main-content ul li {
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+	.user-dashboard {
+		padding: 10px;
+	}
+
+	.dashboard-section h3 {
+		font-size: 18px;
+	}
+
+	#user-balance {
+		font-size: 20px;
+	}
+}
+
+/* !FOOTER */
+footer {
+	grid-row: 3;
+	grid-column: 1 / -1;
+	background-color: rgb(255, 255, 255);
+	font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .footer-contenido {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 32px 32px;
 }
 
 .imagen-footer img {
-    margin-top: 10px; 
-    height: 60px; 
+	margin-top: 10px;
+	height: 60px;
 }
 
 .copyright {
-    
-    font-size: 12px;
-    padding: 5px;
+	font-size: 14px;
+	padding: 5px;
 }
 
-
-.legal h2, .enlaces h2{
-    font-size: 17px;
-    padding-top: 20px;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
+.enlaces h2 {
+	font-size: 17px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	margin-bottom: 10px;
 }
 
-.enlaces{
-    display: flex;
-    flex-direction: column;
+.enlaces {
+	display: flex;
+	flex-direction: column;
 }
 
-.enlaces a{
-    text-decoration: none;
-    color: #000;
-    padding-bottom: 7px;
+.enlaces a {
+	text-decoration: none;
+	color: #333333;
+	padding-bottom: 7px;
 }
 
-.legal p{
-    padding-bottom: 7px;
+.legal p {
+	padding-bottom: 7px;
 }
 
 .footer-titulo {
-    text-align: left;
+	text-align: left;
 }
 
 .redes {
-    display: flex;
-    gap: 12px;
-    padding: 20px 20px 0 20px;
-    
+	display: flex;
+	gap: 12px;
+	padding: 20px 20px 0 20px;
 }
 
 .redes img {
-    width: 30px;
-    height: 30px;
+	width: 30px;
+	height: 30px;
+}
+@media (max-width: 800px) {
+	main {
+		margin-top: 80px;
+	}
 }
 
 @media (max-width: 600px) {
-    footer {
-        flex-direction: column;
-        align-items: flex-start; 
-        padding: 15px;
-    }
+	footer {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 15px;
+	}
 
-    .footer-contenido {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+	.footer-contenido {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
-    .logo {
-        order: 1; 
-        padding: 5px 20px;
-    }
+	.logo {
+		order: 1;
+		padding: 5px 20px;
+	}
 
-    .copyright {
-        order: 2; 
-        text-align: left;
-        padding: 10px;
-    }
+	.copyright {
+		order: 2;
+		text-align: left;
+		padding: 10px;
+	}
 
-    .redes {
-        justify-content: flex-start;
-    }
+	.redes {
+		justify-content: flex-start;
+	}
 
-    .legal h2, .enlaces h2 {
-        font-size: 15px;
-    }
+	.legal h2,
+	.enlaces h2 {
+		font-size: 15px;
+	}
 
-    .redes img {
-        width: 25px;
-        height: 25px;
-    }
+	.redes img {
+		width: 25px;
+		height: 25px;
+	}
 
-    .enlaces a {
-        padding-bottom: 5px;
-    }
+	.enlaces a {
+		padding-bottom: 5px;
+	}
 
-    .copyright {
-        font-size: 11px;
-    }
+	.copyright {
+		font-size: 11px;
+	}
 }
 
 @media (max-width: 400px) {
-    .logo {
-        padding: 5px 10px;
-    }
+	.logo {
+		padding: 5px 10px;
+	}
 
-    .redes img {
-        width: 20px;
-        height: 20px;
-    }
+	.redes img {
+		width: 20px;
+		height: 20px;
+	}
 
-    .legal h2, .enlaces h2 {
-        font-size: 14px;
-    }
+	.legal h2,
+	.enlaces h2 {
+		font-size: 14px;
+	}
 
-    .enlaces {
-        align-items: flex-start;
-    }
+	.enlaces {
+		align-items: flex-start;
+	}
 
-    .enlaces a {
-        padding-bottom: 5px;
-        font-size: 13px;
-    }
+	.enlaces a {
+		padding-bottom: 5px;
+		font-size: 13px;
+	}
 
-    .copyright {
-        font-size: 10px;
-        text-align: left;
-    }
+	.copyright {
+		font-size: 10px;
+		text-align: left;
+	}
 }
-
-
-
 
 /*! FIN BOTON REGISTRAR*/

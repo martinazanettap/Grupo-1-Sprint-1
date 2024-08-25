@@ -1,74 +1,95 @@
 /* Integrado con el estilo principal de la página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F6FA;
-    margin: 0;
-    padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f5f6fa;
+	margin: 0;
+	padding: 0;
 }
 
 .container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    border: 1px solid #E0E0E0; /* Gris claro para el borde */
-    border-radius: 10px;
-    background-color: #FFFFFF; /* Blanco para el fondo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 30px;
+	border: 1px solid #e0e0e0; /* Gris claro para el borde */
+	border-radius: 10px;
+	background-color: #ffffff; /* Blanco para el fondo */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    text-align: center;
-    color: #333333; /* Gris oscuro para el texto */
-    margin-bottom: 20px;
+	text-align: center;
+	color: #333333; /* Gris oscuro para el texto */
+	margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333333; /* Gris oscuro para el texto */
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+	color: #333333; /* Gris oscuro para el texto */
 }
 
-.form-group input, .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #E0E0E0; /* Gris claro para el borde */
-    border-radius: 6px;
-    font-size: 16px;
-    box-sizing: border-box;
+.form-group input,
+.form-group select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #e0e0e0; /* Gris claro para el borde */
+	border-radius: 6px;
+	font-size: 16px;
+	box-sizing: border-box;
 }
 
 .form-group input::placeholder {
-    color: #999999; /* Gris claro para el texto del placeholder */
+	color: #999999; /* Gris claro para el texto del placeholder */
 }
 
 .form-group button {
-    width: 100%;
-    background-color: #0283E9; /* Azul medio para el botón */
-    color: #FFFFFF; /* Blanco para el texto del botón */
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+	width: 100%;
+	background-color: #0283e9; /* Azul medio para el botón */
+	color: #ffffff; /* Blanco para el texto del botón */
+	border: none;
+	padding: 12px;
+	border-radius: 6px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .form-group button:hover {
-    background-color: #0239D6; /* Azul oscuro para el hover del botón */
+	background-color: #0239d6; /* Azul oscuro para el hover del botón */
+}
+
+.form-buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+	width: 100%;
+}
+
+.form-buttons button {
+	background-color: #0283e9; /* Azul medio para el botón */
+	color: #ffffff; /* Blanco para el texto del botón */
+	border: none;
+	padding: 12px;
+	border-radius: 6px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 @media (max-width: 600px) {
-    .container {
-        padding: 20px;
-        margin: 20px;
-    }
+	.container {
+		padding: 20px;
+		margin: 20px;
+	}
 
-    .form-group input, .form-group select, .form-group button {
-        font-size: 14px;
-    }
+	.form-group input,
+	.form-group select,
+	.form-group button {
+		font-size: 14px;
+	}
 }

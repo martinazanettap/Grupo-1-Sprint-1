@@ -1,35 +1,22 @@
-function recuperarItemDeLocalStorage(item) {
-	let usuarioRecuperado = localStorage.getItem(item);
-	if (!usuarioRecuperado) {
-		const nuevoUsuario = {
-			nombre: '',
-			correo: '',
-			saldo: 50,
-			historialTransferencias: [],
-			historialPrestamos: [],
-			historialPagos: []
-		};
-		localStorage.setItem(item, JSON.stringify(nuevoUsuario));
-		return nuevoUsuario;
+document.addEventListener('DOMContentLoaded', function () {
+	const usuario = recuperarUsuariosDeLocalStorage();
+	const usuarioActual = localStorage.getItem('usuarioActual');
+	const datosUsuario = usuario[usuarioActual];
+
+	if (datosUsuario) {
+		const saldoNumerico = parseFloat(datosUsuario.saldo); // Ensure it's a number
+		document.getElementById('user-balance').textContent = `$${saldoNumerico.toFixed(2)}`;
+		cargarHistorial(datosUsuario.historialTransferencias, 'transfer-history');
+		cargarHistorial(datosUsuario.historialPagos, 'payment-history');
+		cargarHistorial(datosUsuario.historialPrestamos, 'loan-history');
 	}
-	return JSON.parse(usuarioRecuperado);
-}
+});
 
-function actualizarItemDeLocalStorage(item, datos) {
-	localStorage.setItem(item, JSON.stringify(datos));
+function cargarHistorial(historial, elementoId) {
+	const ul = document.getElementById(elementoId);
+	historial.forEach((item) => {
+		const li = document.createElement('li');
+		li.textContent = `Fecha: ${item.fecha} - Monto: $${item.monto}`;
+		ul.appendChild(li);
+	});
 }
-
-function actualizarNombreUsuarioEnHeader() {
-	const usuario = recuperarItemDeLocalStorage('usuario');
-	const elementoNombreUsuario = document.querySelector('.user-options span');
-	if (usuario && usuario.nombre && usuario.nombre.length < 16) {
-		elementoNombreUsuario.textContent = usuario.nombre;
-	} else {
-		elementoNombreUsuario.textContent = 'Usuario nuevo';
-	}
-}
-
-// Inicializar y actualizar datos de usuario
-let usuario = recuperarItemDeLocalStorage('usuario');
-// actualizarItemDeLocalStorage('usuario', { ...usuario, nombre: 'Lucas' });
-actualizarNombreUsuarioEnHeader();

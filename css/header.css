@@ -74,13 +74,14 @@ header img {
 	font-size: 16px;
 }
 
-.header-icons button .material-symbols-outlined {
+.header-icons .material-symbols-outlined {
 	font-size: 32px;
 }
 
 .header-icons .user-profile {
 	display: flex;
 	gap: 8px;
+	text-decoration: none;
 }
 
 .header-icons .user-options {
@@ -197,7 +198,7 @@ header img {
 	}
 
 	.navigation {
-		gap: 4px;
+		gap: 8px;
 	}
 	/*! BOTONES */
 	.search-bar {
@@ -227,7 +228,8 @@ header img {
 		font-size: 24px;
 	}
 	.header-icons button span,
-	.header-icons .expand {
+	.header-icons .expand,
+	.header-icons .user-options {
 		display: none;
 	}
 	/*! NAVEGACIÓN PARA TELÉFONOS */
