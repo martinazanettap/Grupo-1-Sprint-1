@@ -95,3 +95,27 @@
 		padding: 16px;
 	}
 }
+
+/*css al mensaje de pagos */ 
+.error {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f00; 
+    color: #fff;
+}
+
+.exito {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #28a745; 
+    color: #fff;
+}
+
