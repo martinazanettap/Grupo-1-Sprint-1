@@ -1,30 +1,31 @@
-.pagos {
+.cuentas {
 	padding: 64px;
+
 	border: 1px solid #e0e0e0;
 	border-radius: 10px;
 	background-color: #ffffff;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.pagos h2 {
+.cuentas h2 {
 	text-align: center;
 	color: #333333;
 	margin-bottom: 20px;
 }
 
-.pagos__form-group {
+.cuentas__form-group {
 	margin-bottom: 20px;
 }
 
-.pagos__form-group label {
+.cuentas__form-group label {
 	display: block;
 	margin-bottom: 8px;
 	font-weight: bold;
 	color: #333333;
 }
 
-.pagos__form-group input,
-.pagos__form-group select {
+.cuentas__form-group input,
+.cuentas__form-group select {
 	width: 100%;
 	padding: 10px;
 	border: 1px solid #e0e0e0;
@@ -33,11 +34,11 @@
 	box-sizing: border-box;
 }
 
-.pagos__form-group input::placeholder {
+.cuentas__form-group input::placeholder {
 	color: #999999;
 }
 
-.pagos__form-group button {
+.cuentas__form-group button {
 	width: 100%;
 	background-color: #0283e9;
 	color: #ffffff;
@@ -49,18 +50,18 @@
 	transition: background-color 0.3s ease;
 }
 
-.pagos__form-group button:hover {
+.cuentas__form-group button:hover {
 	background-color: #0239d6; /* Azul oscuro para el hover del botón */
 }
 
-.pagos__form-buttons {
+.cuentas__form-buttons {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 16px;
 	width: 100%;
 }
 
-.pagos__form-buttons button {
+.cuentas__form-buttons button {
 	background-color: #0283e9; /* Azul medio para el botón */
 	color: #ffffff; /* Blanco para el texto del botón */
 	border: none;
@@ -71,27 +72,15 @@
 	transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width: 800px) {
-	.pagos {
-		padding: 48px;
-	}
-}
-
 @media (max-width: 600px) {
-	.pagos {
-		padding: 32px;
+	.cuentas {
+		padding: 20px;
 		margin: 20px;
 	}
 
-	.pagos__form-group input,
-	.pagos__form-group select,
-	.pagos__form-group button {
+	.cuentas__form-group input,
+	.cuentas__form-group select,
+	.cuentas__form-group button {
 		font-size: 14px;
-	}
-}
-
-@media (max-width: 400px) {
-	.pagos {
-		padding: 16px;
 	}
 }

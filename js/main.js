@@ -16,7 +16,7 @@ function cargarHistorial(historial, elementoId) {
 	const ul = document.getElementById(elementoId); // Accede al elemento donde se mostrará el historial
 	historial.forEach((item) => {
 		const li = document.createElement('li'); // Crea un nuevo elemento de lista para cada entrada del historial
-		li.textContent = `Fecha: ${item.fecha} - Monto: $${item.monto}`; // Configura el texto del elemento de lista
+		li.textContent = `N°: ${item.numero} - Monto: $${item.monto}${item.tasaInteres ? ' - ' + item.tasaInteres : ''}`; // Configura el texto del elemento de lista
 		ul.appendChild(li); // Añade el elemento de lista al contenedor correspondiente
 	});
 }

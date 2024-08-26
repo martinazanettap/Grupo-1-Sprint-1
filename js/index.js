@@ -9,20 +9,18 @@ function recuperarUsuariosDeLocalStorage() {
 				password: 'demo123',
 				saldo: 1000,
 				historialTransferencias: [
-					{ fecha: '2024-01-15', monto: 200, destinatario: 'Proveedor A', descripcion: 'Pago de servicios' },
-					{ fecha: '2024-01-20', monto: 150, destinatario: 'Proveedor B', descripcion: 'Compra de material' }
+					{ numero: '2024-08-15', monto: 200, destinatario: 'Proveedor A', descripcion: 'Pago de servicios' },
+					{ numero: '2024-08-20', monto: 150, destinatario: 'Proveedor B', descripcion: 'Compra de material' }
 				],
 				historialPagos: [
-					{ fecha: '2024-01-18', monto: 100, tipo: 'Luz', descripcion: 'Pago de factura de luz' },
-					{ fecha: '2024-01-22', monto: 50, tipo: 'Internet', descripcion: 'Pago de factura de internet' }
+					{ numero: '14231', monto: 100, metodo: 'Tarjeta de crédito' },
+					{ numero: '13521', monto: 50, metodo: 'Transferencia bancaria' }
 				],
 				historialPrestamos: [
 					{
-						fecha: '2024-01-10',
+						numero: '1',
 						monto: 5000,
-						tipo: 'Personal',
-						tasaInteres: '5%',
-						descripcion: 'Préstamo personal a 12 meses'
+						tasaInteres: '5%'
 					}
 				]
 			}
@@ -82,20 +80,18 @@ function cerrarSesionYVolverADemo() {
 			password: 'demo123',
 			saldo: 1000,
 			historialTransferencias: [
-				{ fecha: '2024-01-15', monto: 200, destinatario: 'Proveedor A', descripcion: 'Pago de servicios' },
-				{ fecha: '2024-01-20', monto: 150, destinatario: 'Proveedor B', descripcion: 'Compra de material' }
+				{ fecha: '2024-08-15', monto: 200, destinatario: 'Proveedor A', descripcion: 'Pago de servicios' },
+				{ fecha: '2024-08-20', monto: 150, destinatario: 'Proveedor B', descripcion: 'Compra de material' }
 			],
 			historialPagos: [
-				{ fecha: '2024-01-18', monto: 100, tipo: 'Luz', descripcion: 'Pago de factura de luz' },
-				{ fecha: '2024-01-22', monto: 50, tipo: 'Internet', descripcion: 'Pago de factura de internet' }
+				{ numero: '14231', monto: 100, metodo: 'Tarjeta de crédito' },
+				{ numero: '13521', monto: 50, metodo: 'Transferencia bancaria' }
 			],
 			historialPrestamos: [
 				{
-					fecha: '2024-01-10',
+					numero: '1',
 					monto: 5000,
-					tipo: 'Personal',
-					tasaInteres: '5%',
-					descripcion: 'Préstamo personal a 12 meses'
+					tasaInteres: '5%'
 				}
 			]
 		};
