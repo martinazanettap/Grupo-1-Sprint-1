@@ -8,8 +8,22 @@ function recuperarUsuariosDeLocalStorage() {
 			password: '1234',
 			saldo: 1000,
 			historialTransferencias: [
-				{ fecha: '2024-08-15', monto: 200, destinatario: 'Proveedor A', descripcion: 'Pago de servicios' },
-				{ fecha: '2024-08-20', monto: 150, destinatario: 'Proveedor B', descripcion: 'Compra de material' }
+				{
+					fecha: '2024-08-15',
+					monto: 200,
+					esIngreso: true,
+					emisor: 'Proveedor A',
+					receptor: 'Demo',
+					descripcion: 'Pago de servicios'
+				},
+				{
+					fecha: '2024-08-20',
+					monto: 150,
+					esIngreso: true,
+					emisor: 'Proveedor B',
+					receptor: 'Demo',
+					descripcion: 'Compra de material'
+				}
 			],
 			historialPagos: [
 				{ fecha: '2024-08-21', numero: '14231', monto: 100, metodo: 'Tarjeta de crédito' },
@@ -79,8 +93,22 @@ function cerrarSesionYVolverADemo() {
 			password: '1234',
 			saldo: 1000,
 			historialTransferencias: [
-				{ fecha: '2024-08-15', monto: 200, destinatario: 'Proveedor A', descripcion: 'Pago de servicios' },
-				{ fecha: '2024-08-20', monto: 150, destinatario: 'Proveedor B', descripcion: 'Compra de material' }
+				{
+					fecha: '2024-08-15',
+					esIngreso: true,
+					monto: 200,
+					emisor: 'Proveedor A',
+					receptor: 'Demo',
+					descripcion: 'Pago de servicios'
+				},
+				{
+					fecha: '2024-08-20',
+					esIngreso: false,
+					monto: 150,
+					emisor: 'Proveedor B',
+					receptor: 'Demo',
+					descripcion: 'Compra de material'
+				}
 			],
 			historialPagos: [
 				{ fecha: '2024-08-21', numero: '14231', monto: 100, metodo: 'Tarjeta de crédito' },
