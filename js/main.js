@@ -1,7 +1,7 @@
 // Carga y muestra la información del usuario al cargar la página
 const usuarios = recuperarUsuariosDeLocalStorage(); // Recupera todos los usuarios de localStorage
 const usuarioActual = localStorage.getItem('usuarioActual'); // Obtiene el usuario actual
-const datosUsuario = usuarios[usuarioActual]; // Accede a los datos del usuario actual
+const datosUsuario = usuarios[usuarioActual] || usuarios; // Accede a los datos del usuario actual
 if (datosUsuario) {
 	saludarUsuario(datosUsuario.nombre);
 	const saldoNumerico = parseFloat(datosUsuario.saldo); // Convierte el saldo a número para asegurar la precisión
